@@ -1,0 +1,26 @@
+{
+  "name": "signal-fire",
+  "version": "0.1.0",
+  "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
+  "homepage": "https://github.com/MichielvdVelde/signal-fire",
+  "license": "MIT",
+  "keywords": [
+    "webrtc",
+    "peerchannel",
+    "datachannel",
+    "signal",
+    "relay",
+    "ice"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichielvdVelde/signal-fire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichielvdVelde/signal-fire/issues"
+  },
+  "dependencies": {
+    "shortid": "^2.2.6",
+    "ws": "^1.1.1"
+  }
+}
