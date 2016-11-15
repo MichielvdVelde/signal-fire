@@ -173,4 +173,4 @@ implementation.
 
 Copyright 2016 [Michiel van der Velde](http://www.michielvdvelde.nl).
 
-This software is licensed under the [MIT License](MIT.md).
+This software is licensed under the [MIT License](LICENSE).
