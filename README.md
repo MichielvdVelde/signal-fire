@@ -82,6 +82,13 @@ That's all there is to it!
 
 #### Communicating with the server
 
+**Smart move:** You can use [the signal-fire client](https://github.com/MichielvdVelde/signal-fire-client) as an easy to use
+client which abstracts away the specifics of communicating with signal-fire and
+the WebRTC set-up and handling.
+
+Using the client is by no means a prerequisite; you can use the standard WebSocket
+as well.
+
 To keep everything as simple as possible, the message format of choice is JSON.
 On the client side you can use **WebSocket** to connect to the server:
 
