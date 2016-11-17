@@ -36,7 +36,6 @@ to contribute!
   * Get the peerId for an authenticated client from a remote source, e.g. a database
 * Improve documentation
 * Add more relays
-  * MQTT
 
 ### Install
 
@@ -144,6 +143,7 @@ Currently these relays are available:
 | Module | Back-end | Notes |
 |---|---|---|
 | [signal-fire-relay-redis](https://github.com/MichielvdVelde/signal-fire-relay-redis) | Redis | Can be used as reference implementation
+| [signal-fire-mqtt](https://github.com/MichielvdVelde/signal-fire-relay-mqtt) | MQTT | - |
 
 #### Using relays
 
