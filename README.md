@@ -174,8 +174,14 @@ const server = new Server({
 If you want to write your own relay, you can use [the Redis relay](https://github.com/MichielvdVelde/signal-fire-relay-redis) as a reference
 implementation.
 
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+## Changelog
 
+* v0.2.0
+  * Exchange `peerId` for `receiverId` in routing messages
+* v0.1.0
+  * Initial release
+
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ### License
 
 Copyright 2016 [Michiel van der Velde](http://www.michielvdvelde.nl).
