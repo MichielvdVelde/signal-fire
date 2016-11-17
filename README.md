@@ -109,19 +109,19 @@ signalServer.onmessage = (event) {
 }
 ```
 
-In order to communicate with another peer, you only need to include `peerId` in
+In order to communicate with another peer, you only need to include `receiverId` in
 your message, like so:
 
 ```js
 // `otherPeerId` is the peerId of another client connected to the server
 
 signalServer.send({
-  peerId: otherPeerId,
+  receiverId: otherPeerId,
   key: 'value'
 })
 ```
 
-By adding the `peerId` key to your outgoing messages the server will route
+By adding the `receiverId` key to your outgoing messages the server will route
 the messages to their intended destination (provided a peer with the provided
 peerId is connected to the server as well).
 
