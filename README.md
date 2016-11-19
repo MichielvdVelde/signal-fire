@@ -176,6 +176,9 @@ implementation.
 
 ## Changelog
 
+* v0.3.0
+  * Changes to how relays work
+  * Added some basic error handling
 * v0.2.0
   * Exchange `peerId` for `receiverId` in routing messages
 * v0.1.0
