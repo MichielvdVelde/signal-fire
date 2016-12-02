@@ -17,7 +17,7 @@ to contribute!
 ### Features
 
 * **WebSockets powered WebRTC signaling server**
-  * Uses [ws](https://github.com/websockets/ws) for light-weight communication
+  * Use [ws](https://github.com/websockets/ws) or [µWS](https://github.com/uWebSockets/uWebSockets) for easy communication
   * Messages are passed using simple JSON objects
 * **Automatic peer ID generation** (also possible to provide your own method)
 * **Completely automatic** routing of messages
@@ -79,6 +79,18 @@ server.start().then(() => {
 
 That's all there is to it!
 
+If you want to use [µWS](https://github.com/uWebSockets/uWebSockets) instead, you can set it in the options:
+
+```js
+const Server = require('signal-fire').Server
+const WebSocketServer = require('uws').Server
+
+const server = new Server({
+  engine: WebSocketServer,
+  port: 8080
+})
+```
+
 #### Communicating with the server
 
 **Smart move:** You can use [the signal-fire client](https://github.com/MichielvdVelde/signal-fire-client) as an easy to use
@@ -133,39 +145,34 @@ peerId is connected to the server as well).
 
 Now you can use the channel to pass ICE candidates etc.
 
-### Relays
+### Relay
 
-Relays can be used to horizontally scale the server. Relays use a publish-subscribe
-messaging back-end to route messages between different instances of the server.
+If you want to run multiple instances of the server that can communicate with each
+other, you can use [signal-fire-relay](https://github.com/MichielvdVelde/signal-fire-relay). It works
+with common pub/sub modules such as [redis](https://github.com/NodeRedis/node_redis) and [mqtt](https://github.com/mqttjs/MQTT.js).
 
-Currently these relays are available:
+#### Using the relay
 
-| Module | Back-end | Notes |
-|---|---|---|
-| [signal-fire-relay-redis](https://github.com/MichielvdVelde/signal-fire-relay-redis) | Redis | Can be used as reference implementation
-| [signal-fire-relay-mqtt](https://github.com/MichielvdVelde/signal-fire-relay-mqtt) | MQTT | - |
-
-#### Using relays
-
-**Relays** are how signal-fire scales. In simple terms, a relay is a module
+A **relay** can be used to scale signal-fire. A relay is a module
 that uses a publish-subscribe messaging channel to route messages between multiple
 instances of the signaling server.
 
 Any message meant for a peerId not on the local instance will be given to the relay.
-Here is an example of how to add a relay (using [the Redis relay](https://github.com/MichielvdVelde/signal-fire-relay-redis)):
+
+Below is an example of using a relay with [mqtt](https://github.com/mqttjs/MQTT.js).
 
 ```js
 const Server = require('signal-fire').Server
-const Relay = require('signal-fire-relay-redis').Relay
+const Relay = require('signal-fire-relay').Relay
+const client = require('mqtt').createClient()
 
-const relay = new Relay({
-  // These options are passed to `node_redis`
-})
-
-// Set up the server with the relay
 const server = new Server({
   port: 8080,
-  relay: relay
+  relay: new Relay(client)
+})
+
+server.start().then(() => {
+  console.log('Server started')
 })
 
 // ...
@@ -176,6 +183,11 @@ implementation.
 
 ## Changelog
 
+* v0.4.0
+  * Updated relay logic to use [signal-fire-relay](https://github.com/MichielvdVelde/signal-fire-relay)
+  * WebSocket engine is now selectable
+  * `error` is now re-emitted
+  * Several other fixes
 * v0.3.0
   * Changes to how relays work
   * Added some basic error handling
@@ -185,6 +197,7 @@ implementation.
   * Initial release
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ### License
 
 Copyright 2016 [Michiel van der Velde](http://www.michielvdvelde.nl).
