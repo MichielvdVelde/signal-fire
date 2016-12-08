@@ -212,6 +212,8 @@ implementation.
 
 ## Changelog
 
+* v0.5.0
+  * Added CLI app and documentation
 * v0.4.0
   * Updated relay logic to use [signal-fire-relay](https://github.com/MichielvdVelde/signal-fire-relay)
   * WebSocket engine is now selectable
