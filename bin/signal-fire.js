@@ -7,8 +7,8 @@ const Server = require('../lib/Server')
 
 program
   .version(pkg.version)
-  .option('-p, --port [port]', 'Port to listen on [8080]', 8080)
-  .option('-v, --verbose', 'Show verbose output')
+  .option('-p, --port [port]', 'port to listen on [8080]', 8080)
+  .option('-v, --verbose', 'show verbose output')
   .parse(process.argv)
 
 const server = new Server({
