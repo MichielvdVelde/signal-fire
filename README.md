@@ -47,10 +47,42 @@ npm install signal-fire
 
 ### Usage
 
-#### Setting up the server
+#### Command-line usage
 
-For the moment you will have to set up the server yourself. In a next version
-a CLI command will be added to allow you to set up a generic server fast.
+signal-fire is now also available as a command-line application. This allows you
+to quickly start a signal-fire server instance with optional verbose output.
+
+Currently there is no support for background jobs (i.e. a daemon), but this may
+come in the future.
+
+Install the package globally to access the cli:
+
+```bash
+npm i -g signal-fire
+```
+
+Next you can use `signal-fire` to start a server:
+
+```bash
+> signal-fire
+signal-fire instance started on port 8080
+press ctrl+c to stop
+```
+
+Use `-h` to view the help:
+
+```bash
+  Usage: signal-fire [options]
+
+  Options:
+
+    -h, --help         output usage information
+    -V, --version      output the version number
+    -p, --port [port]  Port to listen on [8080]
+    -v, --verbose      Show verbose output
+```
+
+#### Setting up the server
 
 The example below provides a simple example:
 
