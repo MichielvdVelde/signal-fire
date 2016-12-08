@@ -212,6 +212,8 @@ implementation.
 
 ## Changelog
 
+* v0.5.1
+  * Fix example and `peerId` (closes #4)
 * v0.5.0
   * Added CLI app and documentation
 * v0.4.0
