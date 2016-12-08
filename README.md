@@ -24,7 +24,6 @@ to contribute!
 * **Supports one-to-one, one-to-many and many-to-many** out of the box
 * **Horizontally scalable**
   * **Relays** use any publish-subscribe messaging back-end (Redis, MQTT, ...)
-  * It's simple to write a relay for a new back-end
 * Uses **ES6** syntax and has been tested on **node.js v7.1.0**
 
 ### Roadmap
@@ -33,9 +32,7 @@ to contribute!
   * What to do with messages for unknown `peerId`s?
 * Provide an authentication mechanism
   * Ability to enable or disable authentication
-  * Get the peerId for an authenticated client from a remote source, e.g. a database
 * Improve documentation
-* Add more relays
 
 ### Install
 
@@ -97,11 +94,11 @@ const server = new Server({
 })
 
 server.on('add_peer', peer => {
-  console.log('Added peer with peerId ' + peer.peerId)
+  console.log(`Added peer with peerId ${peer.peerId}`)
 })
 
 server.on('remove_peer', peerId => {
-  console.log('Removed peer with peerId ' + peerId)
+  console.log(`Removed peer with peerId ${peer.peerId}`)
 })
 
 server.start().then(() => {
