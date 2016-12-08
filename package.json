@@ -4,6 +4,9 @@
   "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
   "homepage": "https://github.com/MichielvdVelde/signal-fire",
   "license": "MIT",
+  "bin": {
+    "signal-fire": "./bin/signal-fire.js"
+  },
   "keywords": [
     "webrtc",
     "peerchannel",
@@ -20,6 +23,7 @@
     "url": "https://github.com/MichielvdVelde/signal-fire/issues"
   },
   "dependencies": {
+    "commander": "^2.9.0",
     "shortid": "^2.2.6",
     "ws": "^1.1.1"
   }
