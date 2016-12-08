@@ -19,8 +19,8 @@ if (program.verbose) {
   server.on('add_peer', peer => {
     console.log(`- Peer added with id ${peer.peerId}`)
   })
-  server.on('remove_peer', peer => {
-    console.log(`- Peer removed with id ${peer.peerId}`)
+  server.on('remove_peer', peerId => {
+    console.log(`- Peer removed with id ${peerId}`)
   })
 }
 

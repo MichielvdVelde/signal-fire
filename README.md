@@ -98,7 +98,7 @@ server.on('add_peer', peer => {
 })
 
 server.on('remove_peer', peerId => {
-  console.log(`Removed peer with peerId ${peer.peerId}`)
+  console.log(`Removed peer with peerId ${peerId}`)
 })
 
 server.start().then(() => {
