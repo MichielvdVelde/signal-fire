@@ -4,9 +4,6 @@
   "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
   "homepage": "https://github.com/MichielvdVelde/signal-fire",
   "license": "MIT",
-  "bin": {
-    "signal-fire": "./bin/signal-fire.js"
-  },
   "main": "./lib/Server.js",
   "keywords": [
     "webrtc",
