@@ -1,10 +1,9 @@
 {
   "name": "signal-fire",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
   "homepage": "https://github.com/MichielvdVelde/signal-fire",
   "license": "MIT",
-  "main": "./lib/Server.js",
   "keywords": [
     "webrtc",
     "peerchannel",
