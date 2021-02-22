@@ -1,5 +1,7 @@
 # WebRTC Signaling Server for node.js
 
+**Deprecated**. A new version is in the works, just be patient a little while longer!
+
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 **signal-fire** is a **WebRTC** signaling server for **node.js**. Designed from
