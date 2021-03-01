@@ -1,8 +1,10 @@
 # WebRTC Signaling Server for node.js
 
-**Deprecated**. Please use [Signal-Fire2](https://github.com/MichielvdVelde/signal-fire)!
-
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
+## Deprecated
+
+signal-fire has been **deprecated** in favor of **[Signal-Fire/server](https://github.com/Signal-Fire/server)**.
 
 **signal-fire** is a **WebRTC** signaling server for **node.js**. Designed from
 the ground up to use **WebSockets**, signal-fire supports horizontal scaling with
